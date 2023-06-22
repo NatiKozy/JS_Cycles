@@ -164,12 +164,13 @@ while (p >= 1){
 // Подсказка: используйте директиву break
 const allNumbers = [1, 2, 3, -4, 5];
 let allPositive = true;
-let Positive = allNumbers.every(function(value) {
-    return value >= 0;
-    })
-    console.log('задание 19', Positive);
-
-
+    for (let number of allNumbers) {
+    if (number <= 0) {
+    console.log('задание 19' + " " + "в массиве есть отрицательные числа");
+    break;
+}
+    number++;
+}
 
 //Задание 20
 // Выведите значения элементов массива до первого отрицательного числа используя цикл do...while
@@ -192,40 +193,15 @@ do{
 } while(h <= 100)
 
 
-//Задание 22// не поняла
-// Запросить у пользователя числа, пока сумма введенных чисел не станет больше 100
+//Задание 22
+
 // let sum2 = 0;
-// let num = 0;
 // do{
-//     sum2 = sum2 + num;
-//     num = parseInt(prompt('Введите число: '));
-// }
-// while (sum2 < 100);
+//     let num = +prompt('Введите число: ');
+//     sum2 += num;
+// } while (sum2 <= 100);
+// console.log('задание 22' + " " + 'Сумма введенных чисел больше 100');
 
-// console.log(sum);
-
-// let sum = 0;
-
-// while (true) {
-
-// let value = +prompt("Введите число", '');
-
-// if (!value)
-//   break; // (*)
-
-// sum += value;
-
-// }
-// alert( 'Сумма: ' + sum );
-
-// let total = 0;
-// let value = +prompt("Введите число", '');
-//  if (total > 100) {
-//     console.log('too much');
-//  } else {
-//     total += value;
-//     console.log(total);
-//  }
 
 //Задание 23
 // Напишите функцию, которая изменит фоновый цвет всех элементов <h4> на странице на синий цвет
