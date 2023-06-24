@@ -159,18 +159,24 @@ while (p >= 1){
     p--
 }
 
-//Задание 19 //не поняла как сделать через while
+//Задание 19 
 // Проверьте, все ли элементы массива являются положительными числами используя цикл while
 // Подсказка: используйте директиву break
 const allNumbers = [1, 2, 3, -4, 5];
 let allPositive = true;
-    for (let number of allNumbers) {
-    if (number <= 0) {
-    console.log('задание 19' + " " + "в массиве есть отрицательные числа");
-    break;
+function isPositive(arr) {
+    let count = 0;
+    while (count < arr.length-1) {
+        if (arr[count]< 0) {
+            allPositive = false;
+            console.log('задание 19 есть отрицательное значение' + arr[count]);
+            break
+        }
+        count++;
+    }
 }
-    number++;
-}
+isPositive(allNumbers);
+console.log('задание 19 все числа положительные?' + allPositive);
 
 //Задание 20
 // Выведите значения элементов массива до первого отрицательного числа используя цикл do...while
@@ -193,15 +199,17 @@ do{
 } while(h <= 100)
 
 
-//Задание 22
+// //Задание 22// законсолено чтобы промт не вылезал
+// // let res = 0;
+// // while (res <= 100) {
+// //     let newResult = prompt('Введите число: ');
 
-// let sum2 = 0;
-// do{
-//     let num = +prompt('Введите число: ');
-//     sum2 += num;
-// } while (sum2 <= 100);
-// console.log('задание 22' + " " + 'Сумма введенных чисел больше 100');
-
+// //     if(isNaN(+newResult)) {
+// //         newResult = prompt('Нужно ввести число');
+// //     } 
+// //     res = res + Number(newResult);
+// // }
+// // console.log(res);
 
 //Задание 23
 // Напишите функцию, которая изменит фоновый цвет всех элементов <h4> на странице на синий цвет
